@@ -44,9 +44,10 @@ export default function Hero() {
               </a>
             </div>
             
+            {/* WAPAS INDIGO/BLUE GRADIENT BUTTON */}
             <a
               href="#contact"
-              className="px-8 py-3 bg-white text-slate-950 font-bold rounded-full hover:bg-indigo-50 transition-all flex items-center gap-2 shadow-lg shadow-white/5"
+              className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold rounded-full hover:from-indigo-500 hover:to-violet-500 transition-all flex items-center gap-2 shadow-lg shadow-indigo-500/25 active:scale-95"
             >
               <Send size={18} />
               Contact Me
@@ -70,10 +71,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="w-56 h-56 md:w-80 md:h-80 shrink-0 relative flex items-center justify-center"
         >
-          {/* Background Glow */}
           <div className="absolute inset-0 bg-indigo-500 rounded-full blur-[80px] opacity-20 animate-pulse" />
           
-          {/* Main Photo */}
           <img
             src={resumeData.basics.photo}
             alt={resumeData.basics.name}
@@ -83,30 +82,28 @@ export default function Hero() {
             }}
           />
 
-          {/* Tag 1: Android Developer (Pill Style + Spaced) */}
+          {/* Tag 1: Android Developer (Mobile Friendly) */}
           <motion.div
             animate={{ y: [-12, 12, -12], x: [-5, 5, -5] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            // md:-left-24 pushes it away from the photo
-            className="absolute -left-8 top-4 md:-left-24 md:top-10 z-20 bg-slate-900/90 border border-slate-800 px-4 py-2 rounded-full flex items-center gap-2.5 shadow-2xl backdrop-blur-md"
+            className="absolute -top-6 md:top-10 md:-left-24 z-20 bg-slate-900/90 border border-slate-800 px-4 py-2 rounded-full flex items-center gap-2.5 shadow-2xl backdrop-blur-md whitespace-nowrap"
           >
             <div className="w-5 h-5 flex items-center justify-center bg-indigo-500/20 rounded-full text-indigo-400 text-xs">
               📱
             </div>
-            <span className="text-slate-200 font-semibold text-xs md:text-sm tracking-wide whitespace-nowrap">Android Developer</span>
+            <span className="text-slate-200 font-semibold text-xs md:text-sm tracking-wide">Android Developer</span>
           </motion.div>
 
-          {/* Tag 2: Kotlin (Pill Style + Spaced) */}
+          {/* Tag 2: Kotlin (Mobile Friendly) */}
           <motion.div
             animate={{ y: [12, -12, 12], x: [5, -5, 5] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            // md:-right-20 pushes it away from the photo
-            className="absolute -right-4 bottom-8 md:-right-20 md:bottom-12 z-20 bg-slate-900/90 border border-slate-800 px-4 py-2 rounded-full flex items-center gap-2.5 shadow-2xl backdrop-blur-md"
+            className="absolute -bottom-6 md:bottom-12 md:-right-20 z-20 bg-slate-900/90 border border-slate-800 px-4 py-2 rounded-full flex items-center gap-2.5 shadow-2xl backdrop-blur-md whitespace-nowrap"
           >
             <div className="w-5 h-5 flex items-center justify-center text-orange-400 text-sm">
               ⚡
             </div>
-            <span className="text-slate-200 font-semibold text-xs md:text-sm tracking-wide whitespace-nowrap">Kotlin</span>
+            <span className="text-slate-200 font-semibold text-xs md:text-sm tracking-wide">Kotlin</span>
           </motion.div>
         </motion.div>
         

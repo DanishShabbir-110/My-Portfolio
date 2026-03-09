@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+@import "tailwindcss";
+
+/* 1. Global Dark Theme Fix */
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background-color: #020617 !important; /* Tailwind's slate-950 */
+  color: #f8fafc; /* slate-50 */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 2. Mobile White Fade/Gradient Removal */
+@media (max-width: 768px) {
+  /* Jo white white sa nichay aata hai, usay forcefully hide karne ke liye */
+  .bg-gradient-to-t, 
+  [class*="bg-gradient-to-t"] {
+    display: none !important;
+  }
+
+  /* Agar mask-image use ho rahi hai card fade ke liye */
+  div, section, article {
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+  }
+}
+
+/* 3. Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 4. Selection Color */
+::selection {
+  background-color: rgba(99, 102, 241, 0.3); /* indigo-500 with opacity */
+  color: white;
+}
