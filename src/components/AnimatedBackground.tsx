@@ -36,7 +36,6 @@ export default function AnimatedBackground() {
       update() {
         this.x += this.vx;
         this.y += this.vy;
-
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
       }
@@ -45,7 +44,7 @@ export default function AnimatedBackground() {
         if (!ctx) return;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+        ctx.fillStyle = 'rgba(99, 102, 241, 0.4)'; // Light Indigo dots
         ctx.fill();
       }
     }
@@ -69,7 +68,7 @@ export default function AnimatedBackground() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 - distance / 1200})`;
+            ctx.strokeStyle = `rgba(99, 102, 241, ${0.15 - distance / 800})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -80,13 +79,7 @@ export default function AnimatedBackground() {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Draw gradient mesh background
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, '#0f172a'); // slate-900
-      gradient.addColorStop(1, '#020617'); // slate-950
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
+      // Gradient yahan se hata diya gaya hai taake ye transparent rahay
       particles.forEach(p => {
         p.update();
         p.draw();
@@ -109,8 +102,7 @@ export default function AnimatedBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-[-1]"
-      style={{ background: '#020617' }}
+      className="fixed inset-0 pointer-events-none -z-10"
     />
   );
 }
