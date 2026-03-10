@@ -43,11 +43,14 @@ export const resumeData = {
         "Basically this is a group project in which 4 persons work with the different technologies with same backend FastAPI and SQL Database.",
         "I build this Application in Android (Kotlin - XML) with backend FastAPI and SQL Database."
       ],
-      links: []
+      links: [
+        { name: "App Code", url: "https://github.com/DanishShabbir-110/MEye-Pro-App.git" },
+        { name: "Backend API", url: "https://github.com/DanishShabbir-110/MEye_Pro_FastAPI.git" }
+      ]
     },
     {
       title: "Mini Task Tracker Application",
-      stack: ["Android", "Kotlin", "XML", "restfulAPI", ".net Framework", "Room Database"],
+      stack: ["Android", "Kotlin", "XML", "RestfulAPI", ".net Framework", "Room Database"],
       bullets: [
         "I built this Application in Android (Kotlin + XML).",
         "For backend Integration i use restfulAPI in .net Framework.",

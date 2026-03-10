@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { resumeData } from '../data';
-import { Code2, FolderGit2 } from 'lucide-react';
+import { Code2, FolderGit2, Smartphone, Server, Github, ExternalLink } from 'lucide-react';
 
 export default function Projects() {
   return (
@@ -29,6 +29,30 @@ export default function Projects() {
           >
             <div className="flex justify-between items-start mb-4">
               <FolderGit2 className="text-indigo-400 w-8 h-8" />
+              
+              {/* --- Smart Links Section --- */}
+              <div className="flex gap-4">
+                {project.links && project.links.map((link, k) => {
+                  const isBackend = link.name.toLowerCase().includes('api') || link.name.toLowerCase().includes('backend');
+                  const isApp = link.name.toLowerCase().includes('app') || link.name.toLowerCase().includes('mobile');
+                  
+                  return (
+                    <a
+                      key={k}
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-indigo-400 transition-colors group/link"
+                      title={link.name}
+                    >
+                      {isBackend ? <Server size={16} /> : isApp ? <Smartphone size={16} /> : <Github size={16} />}
+                      <span className="hidden sm:inline border-b border-transparent group-hover/link:border-indigo-400/50">
+                        {link.name}
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
             </div>
             <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
             <ul className="space-y-2 text-slate-400 mb-6 flex-grow text-sm">
