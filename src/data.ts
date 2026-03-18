@@ -49,20 +49,22 @@ export const resumeData = {
       ]
     },
     {
+      title: "Smart Expense Tracker App",
+      stack: ["Android", "Kotlin", "Room Database","XML"],
+      bullets: [
+        "📈 Real-time Analytics: Built a dynamic dashboard using MPAndroidChart to visualize expense distributions with automated percentage calculations.",
+        "💾 Offline Data Persistence: Implemented Room Database (SQLite) for high-performance, local data storage and seamless CRUD operations.",
+        "🌓 Adaptive UI/UX: Developed a system-aware Dark/Light mode using SharedPreferences and integrated Lottie Animations for a modern user experience."
+      ],
+      links: [{ name: "App Code", url: "https://github.com/DanishShabbir-110/SmartExpenseTrackerApp.git" }]
+    },
+    {
       title: "Mini Task Tracker Application",
       stack: ["Android", "Kotlin", "XML", "RestfulAPI", ".net Framework", "Room Database"],
       bullets: [
         "I built this Application in Android (Kotlin + XML).",
         "For backend Integration i use restfulAPI in .net Framework.",
         "For offline access and storage of Task i use Room Database"
-      ],
-      links: []
-    },
-    {
-      title: "Examination System",
-      stack: ["Flutter", "FastAPI", "Python"],
-      bullets: [
-        "I built this project in Flutter with backend FastAPI in python in which teacher can add multiple exams with different formats and student can see the exam in real time and attempt the exam with in the given time."
       ],
       links: []
     },
