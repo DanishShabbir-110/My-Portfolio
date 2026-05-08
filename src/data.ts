@@ -39,9 +39,9 @@ export const resumeData = {
       title: "MEye-Pro With Timetable & Attendance",
       stack: ["Android", "Kotlin", "XML", "FastAPI", "Python", "SQL Database", "AI"],
       bullets: [
-        "•This is my final year project, this is a security system in which using Al for facial recognition through the Cameras.",
-        "•Basically this is a group project in which 4 persons work with the different technologies with same backend FastAPI and SQL Database.",
-        "•I build this Application in Android (Kotlin - XML) with backend FastAPI and SQL Database."
+        "This is my final year project, this is a security system in which using Al for facial recognition through the Cameras.",
+        "Basically this is a group project in which 4 persons work with the different technologies with same backend FastAPI and SQL Database.",
+        "I build this Application in Android (Kotlin - XML) with backend FastAPI and SQL Database."
       ],
       links: [
         { name: "App Code", url: "https://github.com/DanishShabbir-110/MEye-Pro-App.git" },
@@ -52,9 +52,9 @@ export const resumeData = {
       title: "AI-Powered ATS CV Builder App",
       stack: ["Android", "Kotlin", "Jetpack Compose", "Firebase Authentication", "Firebase Firestore","AI"],
       bullets: [
-        "• Developed an AI-Powered ATS CV Builder Android app using Jetpack Compose and Kotlin, integrating Google Gemini AI API to automatically generate professionally formatted, ATS-optimized CVs with PDF export functionality.",
-        "• Implemented complete Firebase backend including Authentication (Email/Password) and Firestore Database for secure user management and real-time CV data persistence across sessions.",
-        "• Architected the application using MVVM design pattern with Kotlin StateFlow for reactive state management, ensuring seamless data flow across multiple screens including Personal Info, Education, Experience, Skills, and CV Preview."
+        "Developed an AI-Powered ATS CV Builder Android app using Jetpack Compose and Kotlin, integrating Google Gemini AI API to automatically generate professionally formatted, ATS-optimized CVs with PDF export functionality.",
+        "Implemented complete Firebase backend including Authentication (Email/Password) and Firestore Database for secure user management and real-time CV data persistence across sessions.",
+        "Architected the application using MVVM design pattern with Kotlin StateFlow for reactive state management, ensuring seamless data flow across multiple screens including Personal Info, Education, Experience, Skills, and CV Preview."
       ],
       links: [
         { name: "App Code", url: "https://github.com/DanishShabbir-110/CVBuilderApp.git" },
@@ -64,9 +64,9 @@ export const resumeData = {
       title: "Smart Expense Tracker App",
       stack: ["Android", "Kotlin", "Room Database","XML"],
       bullets: [
-        "•📈 Real-time Analytics: Built a dynamic dashboard using MPAndroidChart to visualize expense distributions with automated percentage calculations.",
-        "•💾 Offline Data Persistence: Implemented Room Database (SQLite) for high-performance, local data storage and seamless CRUD operations.",
-        "•🌓 Adaptive UI/UX: Developed a system-aware Dark/Light mode using SharedPreferences and integrated Lottie Animations for a modern user experience."
+        "📈 Real-time Analytics: Built a dynamic dashboard using MPAndroidChart to visualize expense distributions with automated percentage calculations.",
+        "💾 Offline Data Persistence: Implemented Room Database (SQLite) for high-performance, local data storage and seamless CRUD operations.",
+        "🌓 Adaptive UI/UX: Developed a system-aware Dark/Light mode using SharedPreferences and integrated Lottie Animations for a modern user experience."
       ],
       links: [{ name: "App Code", url: "https://github.com/DanishShabbir-110/SmartExpenseTrackerApp.git" }]
     },
@@ -74,9 +74,9 @@ export const resumeData = {
       title: "Mini Task Tracker Application",
       stack: ["Android", "Kotlin", "XML", "RestfulAPI", ".net Framework", "Room Database"],
       bullets: [
-        "•I built this Application in Android (Kotlin + XML).",
-        "•For backend Integration i use restfulAPI in .net Framework.",
-        "•For offline access and storage of Task i use Room Database"
+        "I built this Application in Android (Kotlin + XML).",
+        "For backend Integration i use restfulAPI in .net Framework.",
+        "For offline access and storage of Task i use Room Database"
       ],
       links: []
     },
@@ -84,10 +84,10 @@ export const resumeData = {
       title: "Event Management System",
       stack: ["Windows Forms", ".NET Framework", "SQL Server"],
       bullets: [
-        "•Developed using Windows Forms (.NET Framework) and SQL Server. Allows users to create, manage, and book events with real-time updates.",
-        "•Includes event listing and user registration functionalities. Implemented role based access for users and administrators.",
-        "•Designed an Admin dashboard for managing event operations. Integrated form validation and full CRUD operations.",
-        "•Established robust database connectivity for smooth performance."
+        "Developed using Windows Forms (.NET Framework) and SQL Server. Allows users to create, manage, and book events with real-time updates.",
+        "Includes event listing and user registration functionalities. Implemented role based access for users and administrators.",
+        "Designed an Admin dashboard for managing event operations. Integrated form validation and full CRUD operations.",
+        "Established robust database connectivity for smooth performance."
       ],
       links: []
     }
