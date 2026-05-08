@@ -101,7 +101,8 @@
 
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+// Yahan change kiya hai: motion/react ki jagah framer-motion
+import { motion, AnimatePresence } from 'framer-motion'; 
 import { Mail } from 'lucide-react';
 import AnimatedBackground from './components/AnimatedBackground';
 import Hero from './components/Hero';
@@ -125,7 +126,7 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen text-slate-200 font-sans selection:bg-indigo-500/30 bg-[#020617]">
-      <AnimatePresence>
+      <AnimatePresence mode="wait"> { /* mode="wait" add karna behtar hai */ }
         {loading ? (
           <Splash key="splash" />
         ) : (
@@ -136,19 +137,14 @@ export default function App() {
             transition={{ duration: 0.8 }}
             className="relative z-0"
           >
-            {/* Background is here, sitting at -z-10 */}
             <AnimatedBackground />
-            
             <Navbar />
-            
-            {/* Main content is z-10, so it floats above the particles */}
             <main className="relative z-10 max-w-6xl mx-auto px-6 pb-8 space-y-32">
               <Hero />
               <Experience />
               <Projects />
               <Skills />
               <Education />
-              
               <section id="contact-section">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -164,7 +160,6 @@ export default function App() {
                 <Contact />
               </section>
             </main>
-            
             <Footer />
           </motion.div>
         )}
