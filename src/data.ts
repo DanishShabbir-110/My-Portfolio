@@ -2,7 +2,7 @@ export const resumeData = {
   basics: {
     name: "Danish Shabbir",
     title: "Android Application Developer",
-    summary: "Motivated Software Developer currently working on a Final Year Project, MEye-Pro, an academic management system featuring timetable scheduling and automated attendance tracking. Developed the mobile application using Android (Kotlin + XML) with a scalable FastAPI (Python) backend and SQL Database for efficient data processing and secure communication. Passionate about mobile development, backend technologies, and building impactful software solutions.",
+    summary: "Software Developer with experience in Android application development, backend development, API integration, and database management. Built MEye-Pro, an academic management system featuring timetable scheduling and automated attendance tracking using Kotlin, XML, FastAPI, and SQL. Strong understanding of software development principles, problem-solving, testing, and debugging. Eager to contribute technical skills and grow as a software engineer.",
     location: "Rawalpindi,Pakistan",
     email: "danishshabbir110@gmail.com",
     phone: "0302-0058872",
