@@ -6,7 +6,7 @@ export const resumeData = {
     location: "Rawalpindi,Pakistan",
     email: "danishshabbir110@gmail.com",
     phone: "0302-0058872",
-    photo: "/danish.jpg",
+    photo: "/profile.jpeg",
     resume: "/resume.pdf",
     links: [
       "www.linkedin.com/in/danishshabbir110",
