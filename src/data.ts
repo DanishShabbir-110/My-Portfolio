@@ -1,144 +1,262 @@
+export interface ProjectLink {
+  name: string;
+  url: string;
+  type?: 'app' | 'backend' | 'github' | 'live';
+}
+
+export interface Project {
+  title: string;
+  subtitle?: string;
+  category: 'Android Apps' | 'Full Stack & AI' | 'All';
+  badge?: string;
+  tagline?: string;
+  flagship?: boolean;
+  architecture?: string[];
+  stack: string[];
+  bullets: string[];
+  links: ProjectLink[];
+}
+
+export interface SkillGroup {
+  category: string;
+  description: string;
+  items: string[];
+}
+
+export interface ExperienceItem {
+  role: string;
+  company: string;
+  dates: string;
+  duration?: string;
+  location: string;
+  summary: string;
+  bullets: string[];
+  technologies: string[];
+}
+
+export interface EducationItem {
+  institution: string;
+  degree: string;
+  dates: string;
+  location: string;
+  status?: string;
+  description?: string;
+  highlights?: string[];
+}
+
+export interface CertificationItem {
+  title: string;
+  issuer: string;
+  year?: string;
+  type?: string;
+  description?: string;
+  skills?: string[];
+}
+
 export const resumeData = {
   basics: {
     name: "Danish Shabbir",
-    title: "Android Application Developer",
-    summary: "Software Developer with experience in Android application development, backend development, API integration, and database management. Built MEye-Pro, an academic management system featuring timetable scheduling and automated attendance tracking using Kotlin, XML, FastAPI, and SQL. Strong understanding of software development principles, problem-solving, testing, and debugging. Eager to contribute technical skills and grow as a software engineer.",
-    location: "Rawalpindi,Pakistan",
+    title: "Android Application Developer & Full Stack Developer",
+    summary: "Software Developer specializing in native Android engineering with Kotlin, Jetpack Compose, Clean Architecture, MVVM, and MVI, along with dependency injection using Hilt and Koin. Experienced in the 4 fundamental Android components (Activities, Services, Broadcast Receivers, Content Providers), background concurrency with Coroutines & StateFlow, and full-stack web engineering with React, Node.js, FastAPI, and PostgreSQL. Focused on architecting scalable, resilient, and user-centered software solutions.",
+    location: "Rawalpindi, Pakistan",
     email: "danishshabbir110@gmail.com",
-    phone: "0302-0058872",
+    phone: "+92-3020058872",
+    rawPhone: "923020058872",
     photo: "/profile.jpeg",
     resume: "/resume.pdf",
-    links: [
-      "www.linkedin.com/in/danishshabbir110",
-      "github.com/DanishShabbir-110"
-    ]
+    github: "https://github.com/DanishShabbir-110",
+    linkedin: "https://www.linkedin.com/in/danishshabbir110",
+    status: "Open to opportunities"
   },
   experience: [
     {
-      company: "Online Work",
-      role: "Data Entry",
-      dates: "May 2025 - September 2025 (5 months)",
-      location: "Remote",
+      role: "Full Stack Developer",
+      company: "Full Stack Web Development",
+      dates: "June 2026 – August 2026",
+      duration: "(2 Months)",
+      location: "Hybrid / Remote",
+      summary: "Full-stack web development using React, Node.js, and PostgreSQL.",
       bullets: [
-        "Experienced in online data entry. Proficient in accurately inputting, updating, and maintaining data in various formats.",
-        "Ensuring data integrity and efficiency in completing tasks promptly."
-      ]
-    },
-    {
-      company: "Empaxco Solutions Pvt Ltd.",
-      role: "Customer Sales Representative",
-      dates: "August 2024 - October 2024 (3 months)",
-      location: "Rawalpindi",
-      bullets: [
-        "Sell the services of the Company in the different states of Foreign Countries through the sales calls."
-      ]
+        "Built responsive, modern user interfaces using React, TypeScript, and Tailwind CSS.",
+        "Developed and maintained backend RESTful APIs and server logic with Node.js.",
+        "Managed relational database schemas and optimized data queries with PostgreSQL.",
+        "Collaborated across frontend and backend modules to ship complete application features."
+      ],
+      technologies: ["React", "Tailwind CSS", "Node.js", "PostgreSQL", "TypeScript", "JavaScript", "REST APIs"]
     }
-  ],
+  ] as ExperienceItem[],
   projects: [
     {
       title: "MEye-Pro With Timetable & Attendance",
-      stack: ["Android", "Kotlin", "XML", "FastAPI", "Python", "SQL Database", "AI"],
-      bullets: [
-        "This is my final year project, this is a security system in which using Al for facial recognition through the Cameras.",
-        "Basically this is a group project in which 4 persons work with the different technologies with same backend FastAPI and SQL Database.",
-        "I build this Application in Android (Kotlin - XML) with backend FastAPI and SQL Database."
+      subtitle: "AI-Powered Academic Management & Automated Attendance System",
+      category: "Full Stack & AI",
+      flagship: true,
+      badge: "Final Year Capstone Project",
+      tagline: "Android • FastAPI • Face Recognition",
+      architecture: [
+        "Native Android Client (Kotlin & XML)",
+        "FastAPI Python Microservice Backend",
+        "Real-Time Face Recognition Engine",
+        "Asynchronous Timetable Sync & SQL Database"
       ],
-      links: [
-        { name: "App Code", url: "https://github.com/DanishShabbir-110/MEye-Pro-App.git" },
-        { name: "Backend API", url: "https://github.com/DanishShabbir-110/MEye_Pro_FastAPI.git" }
-      ]
+      stack: ["Android", "Kotlin", "XML", "FastAPI", "Python", "SQL Database", "Face Recognition", "REST APIs"],
+      bullets: [
+        "Engineered the native Android client using Kotlin and XML for an AI-powered security and attendance system utilizing real-time facial recognition.",
+        "Collaborated with a four-developer team, integrating the mobile application with a centralized FastAPI Python backend and SQL database.",
+        "Implemented secure authentication, asynchronous network operations, timetable scheduling, and live student attendance tracking.",
+        "Delivered a dependable mobile client with smooth camera integrations and low-latency API response handling."
+      ],
+      links: []
     },
     {
       title: "AI-Powered ATS CV Builder App",
-      stack: ["Android", "Kotlin", "Jetpack Compose", "Firebase Authentication", "Firebase Firestore","AI"],
-      bullets: [
-        "Developed an AI-Powered ATS CV Builder Android app using Jetpack Compose and Kotlin, integrating Google Gemini AI API to automatically generate professionally formatted, ATS-optimized CVs with PDF export functionality.",
-        "Implemented complete Firebase backend including Authentication (Email/Password) and Firestore Database for secure user management and real-time CV data persistence across sessions.",
-        "Architected the application using MVVM design pattern with Kotlin StateFlow for reactive state management, ensuring seamless data flow across multiple screens including Personal Info, Education, Experience, Skills, and CV Preview."
+      subtitle: "Intelligent Resume Generator with Gemini AI & Firebase",
+      category: "Android Apps",
+      badge: "Google Gemini AI Integrated",
+      tagline: "Jetpack Compose • MVVM • Cloud Firestore",
+      architecture: [
+        "Modern Jetpack Compose Declarative UI",
+        "Google Gemini API Multi-Step Prompting",
+        "Reactive MVVM with Kotlin StateFlow",
+        "Firebase Auth & Firestore Real-Time Sync"
       ],
-      links: [
-        { name: "App Code", url: "https://github.com/DanishShabbir-110/CVBuilderApp.git" },
-      ]
+      stack: ["Android", "Kotlin", "Jetpack Compose", "Google Gemini AI", "Firebase Auth", "Firestore", "MVVM", "StateFlow"],
+      bullets: [
+        "Developed a native Android application using Kotlin and Jetpack Compose that leverages Google Gemini AI to generate professionally formatted, ATS-optimized resumes.",
+        "Implemented Firebase Authentication and Cloud Firestore for secure user credentials and real-time document synchronization.",
+        "Structured the codebase using MVVM design pattern with Kotlin StateFlow for reactive, predictable state transitions across multi-step creation flows.",
+        "Built comprehensive features including real-time CV previews, education/work history management, and clean PDF export functionality."
+      ],
+      links: []
     },
     {
       title: "Smart Expense Tracker App",
-      stack: ["Android", "Kotlin", "Room Database","XML"],
-      bullets: [
-        "📈 Real-time Analytics: Built a dynamic dashboard using MPAndroidChart to visualize expense distributions with automated percentage calculations.",
-        "💾 Offline Data Persistence: Implemented Room Database (SQLite) for high-performance, local data storage and seamless CRUD operations.",
-        "🌓 Adaptive UI/UX: Developed a system-aware Dark/Light mode using SharedPreferences and integrated Lottie Animations for a modern user experience."
+      subtitle: "Personal Finance Analytics & Budget Tracking Application",
+      category: "Android Apps",
+      badge: "Offline-First Analytics",
+      tagline: "Room DB • MPAndroidChart • Kotlin",
+      architecture: [
+        "High-Performance Local Room (SQLite) Storage",
+        "Interactive MPAndroidChart Analytics",
+        "Zero-Latency CRUD & Category Distribution",
+        "Offline-First Architecture"
       ],
-      links: [{ name: "App Code", url: "https://github.com/DanishShabbir-110/SmartExpenseTrackerApp.git" }]
+      stack: ["Android", "Kotlin", "XML", "Room Database (SQLite)", "MPAndroidChart", "Data Persistence"],
+      bullets: [
+        "Engineered a personal finance and expense tracking Android application with real-time financial metrics and category-wise spending breakdowns.",
+        "Integrated MPAndroidChart to display interactive graphical analytics, budget tracking charts, and automated distribution calculations.",
+        "Employed Room Database (SQLite) for high-performance offline data storage, seamless local persistence, and zero-latency CRUD operations."
+      ],
+      links: []
     },
     {
       title: "Mini Task Tracker Application",
-      stack: ["Android", "Kotlin", "XML", "RestfulAPI", ".net Framework", "Room Database"],
+      subtitle: "Offline-First Task Management with .NET API Sync",
+      category: "Android Apps",
+      badge: "Client-Server Sync",
+      tagline: "Room DB • ASP.NET Web API • REST",
+      architecture: [
+        "Offline Task Caching with Room SQLite",
+        "ASP.NET Web API Server Communication",
+        "Conflict-Free State Sync on Reconnection",
+        "Native Android XML & Material Components"
+      ],
+      stack: ["Android", "Kotlin", "XML", "ASP.NET Web API", "Room Database (SQLite)", "REST APIs"],
       bullets: [
-        "I built this Application in Android (Kotlin + XML).",
-        "For backend Integration i use restfulAPI in .net Framework.",
-        "For offline access and storage of Task i use Room Database"
+        "Built an offline-first Android task tracking application in Kotlin and XML integrated with an ASP.NET Web API backend.",
+        "Utilized Room Database for local task caching, ensuring instant UI updates and seamless data synchronization when connectivity is restored."
       ],
       links: []
     },
     {
       title: "Event Management System",
-      stack: ["Windows Forms", ".NET Framework", "SQL Server"],
+      subtitle: "Desktop Event Booking & Management System",
+      category: "Full Stack & AI",
+      badge: "Desktop Architecture & RBAC",
+      tagline: "Windows Forms • SQL Server • C#",
+      architecture: [
+        "Multi-Tier Windows Forms Architecture",
+        "Role-Based Access Control (RBAC)",
+        "Relational Schema Design & Stored Procedures",
+        "Automated Transaction Validation"
+      ],
+      stack: ["Windows Forms", ".NET Framework", "SQL Server", "C#", "RBAC"],
       bullets: [
-        "Developed using Windows Forms (.NET Framework) and SQL Server. Allows users to create, manage, and book events with real-time updates.",
-        "Includes event listing and user registration functionalities. Implemented role based access for users and administrators.",
-        "Designed an Admin dashboard for managing event operations. Integrated form validation and full CRUD operations.",
-        "Established robust database connectivity for smooth performance."
+        "Developed a desktop event booking and scheduling system using Windows Forms (.NET Framework) and Microsoft SQL Server.",
+        "Implemented role-based access control (RBAC) separating administrator management dashboards from standard user reservation modules.",
+        "Designed comprehensive database schemas, automated form validation, and transactional data operations."
       ],
       links: []
     }
-  ],
+  ] as Project[],
   skills: [
     {
-      category: "Languages & Frameworks",
-      items: ["Android Development", "Kotlin","XML","Jetpack Compose","Firebase Authentication","Firebase Firestore", "C#", "SQL", ".Net Framework", "FastAPI", "Python", "Flutter", "C++", "ASP.net"]
+      category: "Android Development",
+      description: "Clean Architecture, MVI/MVVM paradigms, dependency injection, and native system components",
+      items: ["Kotlin", "Jetpack Compose", "Clean Architecture", "MVVM & MVI", "Hilt (Dagger)", "Koin DI", "Android Core Components", "Room Database (SQLite)", "Coroutines & StateFlow", "Android XML"]
     },
     {
-      category: "Tools & Others",
-      items: ["MS Office", "Problem Solving"]
+      category: "Frontend Development",
+      description: "Modern web interfaces, component architecture, and responsive styling",
+      items: ["React", "Tailwind CSS", "TypeScript", "JavaScript", "HTML5 & CSS3", "Responsive Web Design"]
+    },
+    {
+      category: "Backend Development",
+      description: "Server-side logic, RESTful API architecture, and access control",
+      items: ["Node.js", "FastAPI (Python)", "ASP.NET Web API", "RESTful API Design", "Authentication & Authorization (RBAC)"]
+    },
+    {
+      category: "Databases & Storage",
+      description: "Relational database modeling, query optimization, and offline caching",
+      items: ["PostgreSQL", "Microsoft SQL Server", "SQLite (Room)", "Firebase Firestore", "Stored Procedures & Queries"]
+    },
+    {
+      category: "AI & Integrations",
+      description: "AI model integrations, computer vision, and third-party APIs",
+      items: ["Google Gemini AI API", "Computer Vision / OpenCV", "Facial Recognition", "Firebase Authentication", "Google Maps API"]
+    },
+    {
+      category: "Tools & Workflow",
+      description: "Version control, development environments, and API testing",
+      items: ["Android Studio", "Git & GitHub", "Postman", "Visual Studio", "VS Code"]
     }
-  ],
+  ] as SkillGroup[],
   education: [
     {
       institution: "Barani Institute of Information Technology",
-      degree: "Computer Science - Bachelor Of Science",
-      dates: "October 2022 - May 2026",
-      location: "Rawalpindi"
+      degree: "Bachelor of Science in Computer Science (BSCS)",
+      dates: "2022 – 2026",
+      status: "Final Year / In Progress",
+      location: "Rawalpindi, Pakistan",
+      description: "Comprehensive coursework in data structures, algorithms, software engineering, mobile application development, database management systems, and web technologies.",
+      highlights: ["Mobile App Development (Android / Kotlin)", "Data Structures & Algorithms", "Database Systems (PostgreSQL / SQL)", "Full Stack Web Engineering"]
     },
     {
-      institution: "Arid Agriculture University",
-      degree: "Bachelor's Degree, Computational Science",
-      dates: "",
-      location: ""
-    },
-    {
-      institution: "Govt. Post Graduate Collage Satellite Town",
-      degree: "ICS (Intermediate in General Science)",
-      dates: "10/2020 - 07/2022",
-      location: "Rawalpindi"
-    },
-    {
-      institution: "Govt. Boys High School Zarai Form",
-      degree: "Matric",
-      dates: "03/2018 - 03/2020",
-      location: "Rawalpindi"
+      institution: "Govt. Post Graduate College Satellite Town",
+      degree: "Intermediate in Computer Science (ICS)",
+      dates: "2020 – 2022",
+      status: "Completed",
+      location: "Rawalpindi, Pakistan",
+      description: "Strong academic foundation in mathematics, analytical problem solving, programming principles, and statistics.",
+      highlights: ["Programming Fundamentals", "Computer Architecture", "Applied Mathematics", "Statistics"]
     }
-  ],
+  ] as EducationItem[],
   certifications: [
-    "•Devop's Workshop",
-    "•Nascon's Certificate in Speed Programming"
-  ],
-  achievements: [],
-  awards: [],
-  extra: [
-    "Single",
-    "Male",
-    "DOB: 2005-05-24",
-    "Languages: Urdu, Punjabi, English",
-    "Hobbies: Development, Coding, Problem Solving, Learing"
-  ]
+    {
+      title: "DevOps Workshop",
+      issuer: "Hands-on Technical Workshop",
+      year: "2024",
+      type: "Technical Workshop",
+      description: "Hands-on training in containerization workflows, continuous integration & delivery, and automated deployment pipelines.",
+      skills: ["Docker", "CI/CD Pipelines", "Git Workflow", "Automation"]
+    },
+    {
+      title: "Nascon Speed Programming Competition",
+      issuer: "FAST-NUCES NASCON",
+      year: "2023",
+      type: "Coding Competition",
+      description: "Competitive collegiate programming competition testing speed, algorithmic problem solving, and data structures.",
+      skills: ["Data Structures", "Algorithms", "Competitive Programming", "Problem Solving"]
+    }
+  ] as CertificationItem[]
 };
